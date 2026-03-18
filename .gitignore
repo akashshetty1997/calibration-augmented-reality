@@ -1,0 +1,36 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.o
+*.obj
+
+# Static and Dynamic libraries
+*.a
+*.lib
+*.so
+*.dylib
+
+# Executables
+ar_project
+robust_features
+
+# Project-specific Data
+# We keep the code, but ignore the specific calibration results 
+# for different cameras/users if you don't want to track them.
+# Uncomment the next line if you want to keep your intrinsic_params private.
+# intrinsic_params.yml
+
+# Calibration Images/Screenshots
+screenshot_*.png
+data/
+
+# IDE and OS specific files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build directories (if using CMake later)
+build/

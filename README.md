@@ -43,7 +43,7 @@ Ensure your webcam is connected and run the executable:
 ## Usage Instructions
 
 | Key | Action |
-| : | : |
+|:---:|:---|
 | **'s'** | **Save Frame:** Stores current checkerboard corners for calibration. |
 | **'c'** | **Calibrate:** Runs the calibration math (requires 5+ saved frames). |
 | **'w'** | **Write File:** Saves the calibrated parameters to `intrinsic_params.yml`. |

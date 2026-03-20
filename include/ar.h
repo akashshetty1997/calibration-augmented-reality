@@ -17,10 +17,20 @@ bool estimatePose(const std::vector<cv::Vec3f> &point_set,
                   cv::Mat &rvec,
                   cv::Mat &tvec);
 
+// Original: draws house on a detected target
 void drawVirtualObject(cv::Mat &frame,
                        const cv::Mat &cameraMatrix,
                        const cv::Mat &distCoeffs,
                        const cv::Mat &rvec,
                        const cv::Mat &tvec);
+
+// Extension: objectID selects which object to draw
+//   0 = house, 1 = tower
+void drawVirtualObject(cv::Mat &frame,
+                       const cv::Mat &cameraMatrix,
+                       const cv::Mat &distCoeffs,
+                       const cv::Mat &rvec,
+                       const cv::Mat &tvec,
+                       int objectID);
 
 #endif

@@ -6,30 +6,17 @@
 # Build system for the Calibration and Augmented Reality project.
 # Links calibration and ar modules with OpenCV.
 
-# Compiler and flags
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -I./include $(shell pkg-config --cflags opencv4)
-LIBS = $(shell pkg-config --libs opencv4)
+CXXFLAGS = -std=c++17 -Wall $(shell pkg-config --cflags opencv4)
+LDFLAGS = $(shell pkg-config --libs opencv4)
 
-# Target executable name
-TARGET = ar_project
+all: ar_project feature_detection
 
-# Source files (Now including ar.cpp)
-SRCS = src/main.cpp src/calibration.cpp src/ar.cpp
-OBJS = $(SRCS:.cpp=.o)
+ar_project: src/main.cpp src/calibration.cpp src/ar.cpp
+	$(CXX) $(CXXFLAGS) -o ar_project src/main.cpp src/calibration.cpp src/ar.cpp $(LDFLAGS)
 
-# Default rule
-all: $(TARGET)
+feature_detection: src/feature_detection.cpp
+	$(CXX) $(CXXFLAGS) -o feature_detection src/feature_detection.cpp $(LDFLAGS)
 
-$(TARGET): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS) $(LIBS)
-
-# Rule for object files
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
-
-# Clean up
 clean:
-	rm -f $(OBJS) $(TARGET)
-
-.PHONY: all clean
+	rm -f ar_project feature_detection *.png

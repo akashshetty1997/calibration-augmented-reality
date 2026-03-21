@@ -33,4 +33,7 @@ data/
 *.swo
 
 # Build directories (if using CMake later)
-build/
+build/feature_detection
+ar_project
+*.o
+intrinsic_params.yml

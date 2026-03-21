@@ -4,6 +4,10 @@
 **Date:** March 2026  
 **Course:** CS 5330 - Pattern Recognition & Computer Vision  
 
+## Submission Info
+**Videos:** No videos submitted.  
+**Time Travel Days:** Not using any time travel days.
+
 
 
 ## Overview
@@ -125,3 +129,4 @@ A separate window titled **"Feature Detection"** opens showing the live camera f
 ## Acknowledgements
 * OpenCV Documentation for `calibrateCamera`, `solvePnP`, `cornerHarris`, and `ORB`.
 * Checkerboard target provided by the course materials.
+* Claude AI for debugging assistance.
